@@ -1,0 +1,4 @@
+# Real names that must never appear in a post. One per line, case-insensitive.
+# Replace these two examples with the real client name and repo name.
+REPLACE-ME-CLIENT-NAME
+REPLACE-ME-REPO-NAME

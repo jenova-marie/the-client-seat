@@ -1,0 +1,7 @@
+# Executor scratch: ledger, verified-facts notes, fix-pass tests
+.superpowers/
+# Real client and repo names live only on the author's machine
+scripts/forbidden.txt
+# Rendered HTML for the Medium paste; regenerate with scripts/render-for-medium.sh
+build/
+.DS_Store
