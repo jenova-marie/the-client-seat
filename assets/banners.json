@@ -1,0 +1,74 @@
+[
+  {
+    "part": 0,
+    "title": "Why I'm making my client learn with AI",
+    "slug": "00-why-learn-with-ai",
+    "file": "assets/banners/00-why-learn-with-ai.png"
+  },
+  {
+    "part": 1,
+    "title": "Your first tutor session",
+    "slug": "01-your-first-tutor-session",
+    "file": "assets/banners/01-your-first-tutor-session.png"
+  },
+  {
+    "part": 2,
+    "title": "Catching Claude being wrong",
+    "slug": "02-catching-claude-being-wrong",
+    "file": "assets/banners/02-catching-claude-being-wrong.png"
+  },
+  {
+    "part": 3,
+    "title": "Don't fear the clear",
+    "slug": "03-dont-fear-the-clear",
+    "file": "assets/banners/03-dont-fear-the-clear.png"
+  },
+  {
+    "part": 4,
+    "title": "What a repo actually is",
+    "slug": "04-what-a-repo-actually-is",
+    "file": "assets/banners/04-what-a-repo-actually-is.png"
+  },
+  {
+    "part": 5,
+    "title": "Joining the project",
+    "slug": "05-joining-the-project",
+    "file": "assets/banners/05-joining-the-project.png"
+  },
+  {
+    "part": 6,
+    "title": "Your first contribution",
+    "slug": "06-your-first-contribution",
+    "file": "assets/banners/06-your-first-contribution.png"
+  },
+  {
+    "part": 7,
+    "title": "Bringing your data along",
+    "slug": "07-bringing-your-data-along",
+    "file": "assets/banners/07-bringing-your-data-along.png"
+  },
+  {
+    "part": 8,
+    "title": "Reading code without being a coder",
+    "slug": "08-reading-code-without-being-a-coder",
+    "file": "assets/banners/08-reading-code-without-being-a-coder.png"
+  },
+  {
+    "part": 9,
+    "title": "Teach Claude a skill",
+    "slug": "09-teach-claude-a-skill",
+    "file": "assets/banners/09-teach-claude-a-skill.png"
+  },
+  {
+    "part": 10,
+    "title": "Working from anywhere (optional)",
+    "slug": "10-working-from-anywhere",
+    "file": "assets/banners/10-working-from-anywhere.png"
+  },
+  {
+    "part": 11,
+    "title": "How we work together now",
+    "slug": "11-how-we-work-together-now",
+    "file": "assets/banners/11-how-we-work-together-now.png"
+  }
+]
