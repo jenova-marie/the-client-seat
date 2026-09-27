@@ -71,6 +71,7 @@ def render(parts: list[dict]) -> None:
         page = BUILD / f"{part['slug']}.html"
         page.write_text(fill(template, part, bg_tag))
         png = ROOT / part["file"]
+        png.unlink(missing_ok=True)  # a stale committed PNG must not pass as a fresh screenshot
         cmd = [CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars",
                "--force-device-scale-factor=1", "--window-size=1600,900",
                "--virtual-time-budget=3000", f"--screenshot={png}", page.resolve().as_uri()]
