@@ -100,6 +100,8 @@ def main(post_path: str) -> int:
                 fails.append(f"forbidden term present: {term}")
         if "REPLACE-ME" in FORBIDDEN.read_text():
             fails.append("scripts/forbidden.txt still has REPLACE-ME entries")
+    else:
+        fails.append("scripts/forbidden.txt missing; copy scripts/forbidden.example.txt to scripts/forbidden.txt and fill it in")
 
     if re.match(r"^---\s*\n", text):
         fails.append("frontmatter present")

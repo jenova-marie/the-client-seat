@@ -1,4 +1,6 @@
-# Getting Started Making Claude Do Everything
+# The Client Seat
+
+Learning a real software project with AI as your tutor.
 
 A series for people who have never opened a terminal and are about to join a
 real software project anyway. The tools are the example. Learning with AI as
