@@ -5,6 +5,8 @@ import re
 import sys
 from pathlib import Path
 
+from PIL import Image
+
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "assets" / "banners.json"
 H1 = re.compile(r"^# Part (\d+): (.+?)\s*$", re.M)
@@ -34,6 +36,18 @@ def main() -> int:
             fails.append(f"part {e['part']}: manifest title {e['title']!r} != post H1 {want!r}")
         if not e["slug"] or not e["file"].endswith(f"{e['slug']}.png"):
             fails.append(f"part {e['part']}: slug/file mismatch")
+        png = ROOT / e["file"]
+        if not png.exists():
+            fails.append(f"part {e['part']}: {e['file']} missing")
+            continue
+        size = Image.open(png).size
+        if size != (1600, 900):
+            fails.append(f"part {e['part']}: {e['file']} is {size}, expected (1600, 900)")
+        html = ROOT / "build" / "banners" / f"{e['slug']}.html"
+        if html.exists():
+            cls = "long" if len(e["title"]) > 30 else "short"
+            if f'class="title {cls}"' not in html.read_text():
+                fails.append(f"part {e['part']}: title class should be {cls!r}")
     for f in fails:
         print("FAIL:", f)
     print("PASS banners" if not fails else "FAIL banners")

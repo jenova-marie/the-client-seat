@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{SERIES}} · Part {{PART}}</title>
+<style>
+  @font-face { font-family: "Fraunces"; src: url("fonts/Fraunces.ttf") format("truetype"); font-weight: 100 900; }
+  @font-face { font-family: "Inter"; src: url("fonts/Inter.ttf") format("truetype"); font-weight: 100 900; }
+  html, body { margin: 0; padding: 0; width: 1600px; height: 900px; overflow: hidden; background: #1b0f2e; }
+  .card { position: relative; width: 1600px; height: 900px; overflow: hidden; }
+  .bg { position: absolute; inset: 0; width: 1600px; height: 900px; object-fit: cover; }
+  .bg-fallback { position: absolute; inset: 0;
+    background: linear-gradient(110deg, #0f2b3a 0%, #3b1f4e 38%, #8b2a5e 70%, #f2a58a 100%); }
+  .tint { position: absolute; inset: 0; mix-blend-mode: color; opacity: 0.18;
+    background: hsl({{HUE}}, 70%, 50%); }
+  .panel { position: absolute; left: 80px; top: 80px; width: 560px; height: 740px;
+    box-sizing: border-box; padding: 56px 52px; border-radius: 28px;
+    background: rgba(18, 8, 38, 0.58); backdrop-filter: blur(8px);
+    color: #fff; display: flex; flex-direction: column; }
+  .series { font-family: "Inter", sans-serif; font-weight: 600; font-size: 24px;
+    letter-spacing: 0.22em; text-transform: uppercase; opacity: 0.88; }
+  .part { font-family: "Fraunces", serif; font-weight: 800; font-size: 150px; line-height: 1;
+    margin-top: 28px; letter-spacing: -0.02em; }
+  .title { font-family: "Fraunces", serif; font-weight: 500; line-height: 1.15; margin-top: 28px;
+    text-wrap: balance; }
+  .title.short { font-size: 54px; }
+  .title.long { font-size: 44px; }
+  .author { font-family: "Inter", sans-serif; font-weight: 500; font-size: 24px; opacity: 0.85;
+    margin-top: auto; }
+</style>
+</head>
+<body>
+<div class="card">
+  {{BG}}
+  <div class="tint"></div>
+  <div class="panel">
+    <div class="series">{{SERIES}}</div>
+    <div class="part">Part {{PART}}</div>
+    <div class="title {{TITLE_CLASS}}">{{TITLE}}</div>
+    <div class="author">{{AUTHOR}}</div>
+  </div>
+</div>
+</body>
+</html>
